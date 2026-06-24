@@ -109,6 +109,16 @@ h2.sec{font-size:clamp(25px,4vw,36px);font-weight:900;line-height:1.25;margin:10
 .case .demo .dl{font-weight:700;font-size:15.5px;color:var(--ink)}
 .case .demo .t{font-size:12px;color:var(--soft);font-weight:500;margin-top:2px}
 .case .demo .darr{color:var(--blue);font-weight:700;font-size:20px;flex:none}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:740px}
+@media(max-width:560px){.duo{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}}
+.pcard{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line);box-shadow:0 12px 32px -18px rgba(26,43,56,.45);transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 22px 46px -20px rgba(10,133,201,.5)}
+.pcard .pimg{position:absolute;inset:0;background-size:cover;transition:transform .55s ease}
+.pcard:hover .pimg{transform:scale(1.07)}
+.pcard .pcap{position:absolute;left:0;right:0;bottom:0;padding:22px 18px 16px;color:#fff;background:linear-gradient(to top,rgba(12,22,30,.9),rgba(12,22,30,.45) 55%,transparent)}
+.pcard .ptag{font-size:12px;font-weight:700;color:#bfe3fa;letter-spacing:.03em}
+.pcard .pt{font-size:20px;font-weight:800;margin-top:5px;line-height:1.2}
+.pcard .ps{font-size:12.5px;opacity:.92;margin-top:4px;line-height:1.5}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tags span{background:#EAF4FB;color:var(--blue-d);font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px}
 
@@ -261,26 +271,23 @@ footer img{height:26px;margin:0 auto 12px;opacity:.9}
     <h2 class="sec">實績作品</h2>
     <p class="lead">精選案例與多產業作品。部分客戶基於隱私以產業類型呈現，完整連結歡迎洽詢。</p>
 
-    <div class="case-box" style="margin-top:34px">
-      <div>
-        <div class="cat" style="font-size:13px">精選案例 · 身心療癒空間</div>
-        <h3 style="font-size:23px;font-weight:800;margin:6px 0 12px">有我在療癒所｜官網 ＋ LINE 預約系統</h3>
-        <div class="tags">
-          <span>一頁式品牌官網</span><span>互動自評量表</span><span>LINE LIFF 預約</span>
-          <span>推播核准制</span><span>後台＋帳本</span><span>結構化資料</span><span>跨瀏覽器最佳化</span>
+    <div class="duo" style="margin-top:30px">
+      <a class="pcard" href="https://web.jiachun-mmt.com" target="_blank" rel="noopener">
+        <div class="pimg" style="background-image:url('assets/founder.jpg');background-position:center 18%"></div>
+        <div class="pcap">
+          <div class="ptag">家群本站 · 自有品牌</div>
+          <div class="pt">家群企業官網</div>
+          <div class="ps">創辦人 劉得群｜你正在看的這個網站就是作品</div>
         </div>
-        <p style="margin-top:16px;color:var(--soft)">從零打造品牌門面與互動自評，到串接 LINE 的全自動預約與營運後台，並完成 SEO/GEO 讓店家能被 Google 與 AI 引擎找到。點右側看上線成果。</p>
-      </div>
-      <div class="demo">
-        <a href="https://imhere-landing.vercel.app" target="_blank" rel="noopener">
-          <div class="dimg" style="background-image:url('assets/case-web.jpg')"></div>
-          <div class="drow"><div><div class="dl">品牌官網</div><div class="t">imhere-landing.vercel.app</div></div><span class="darr">→</span></div>
-        </a>
-        <a href="https://healing-booking.vercel.app" target="_blank" rel="noopener">
-          <div class="dimg" style="background-image:url('assets/case-line.jpg')"></div>
-          <div class="drow"><div><div class="dl">LINE 預約系統</div><div class="t">healing-booking.vercel.app</div></div><span class="darr">→</span></div>
-        </a>
-      </div>
+      </a>
+      <a class="pcard" href="https://imhere-landing.vercel.app" target="_blank" rel="noopener">
+        <div class="pimg" style="background-image:url('assets/case-line.jpg');background-position:center"></div>
+        <div class="pcap">
+          <div class="ptag">客戶案例 · 身心療癒空間</div>
+          <div class="pt">有我在療癒所</div>
+          <div class="ps">品牌官網 ＋ LINE 預約系統 ＋ SEO/GEO</div>
+        </div>
+      </a>
     </div>
 
     <h3 style="font-size:21px;font-weight:800;margin:48px 0 18px">更多作品 · More Works</h3>
