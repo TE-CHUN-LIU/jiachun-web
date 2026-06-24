@@ -83,7 +83,7 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
       <div class="featured">
         {featured.map((f) => (
           <a class="fcard" href={f.href} target="_blank" rel="noopener">
-            <div class="img" style={`background-image:url('${f.img}')`}></div>
+            <div class="img" style={`background-image:url('${f.img}');background-position:${f.pos}`}></div>
             <div class="body">
               <div class="eb">{f.eyebrow}</div>
               <h3>{f.title}</h3>

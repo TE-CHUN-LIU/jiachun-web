@@ -32,8 +32,8 @@ export const whyCards = [
 ];
 
 export const featured = [
-  { href: "https://www.jiachun-mmt.com/#about", img: "/assets/founder.jpg", eyebrow: "自有品牌 · 本站即範例", title: "得群ＭＭＴ生日人格學｜商業策略分析", desc: "創辦人劉得群——你正在看的這個網站就是作品。品牌官網＋知識文章＋線上天賦分析工具・Next.js。" },
-  { href: "https://imhere-landing.vercel.app", img: "/assets/case-line.jpg", eyebrow: "客戶案例 · 身心療癒空間", title: "I'm here 有我在療癒所—頌缽｜靈氣｜希塔｜水晶", desc: "品牌官網 ＋ LINE 預約系統 ＋ SEO/GEO 整案打造，從形象到預約成交一條龍。" },
+  { href: "https://www.jiachun-mmt.com/#about", img: "/assets/founder.jpg", pos: "center 18%", eyebrow: "自有品牌 · 本站即範例", title: "得群ＭＭＴ生日人格學｜商業策略分析", desc: "創辦人劉得群——你正在看的這個網站就是作品。品牌官網＋知識文章＋線上天賦分析工具・Next.js。" },
+  { href: "https://imhere-landing.vercel.app", img: "/assets/case-line.jpg", pos: "center 30%", eyebrow: "客戶案例 · 身心療癒空間", title: "I'm here 有我在療癒所—頌缽｜靈氣｜希塔｜水晶", desc: "品牌官網 ＋ LINE 預約系統 ＋ SEO/GEO 整案打造，從形象到預約成交一條龍。" },
 ];
 
 export const works = [
