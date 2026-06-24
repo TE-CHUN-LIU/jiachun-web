@@ -25,6 +25,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://web.jiachun-mmt.com/#org","name":"家群企業","alternateName":"2020家群企業","url":"https://web.jiachun-mmt.com/","logo":"https://web.jiachun-mmt.com/assets/logo.png","image":"https://web.jiachun-mmt.com/assets/logo.png","description":"家群企業｜劉得群 提供品牌形象官網、LINE 線上預約系統、SEO/GEO 優化的一站式網頁設計服務。模組化、透明報價。","telephone":"+886-932-174-988","taxID":"87404079","founder":{"@type":"Person","name":"劉得群"},"areaServed":{"@type":"Country","name":"臺灣"},"knowsAbout":["品牌官網","LINE 預約系統","LIFF","SEO","GEO 生成式引擎優化","Next.js","響應式網頁設計"],"sameAs":["https://lin.ee/y4tVOQJ"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"網頁設計服務","itemListElement":[{"@type":"Offer","priceCurrency":"TWD","price":"79000","itemOffered":{"@type":"Service","name":"品牌形象官網","description":"一頁式 RWD 品牌官網、互動功能、視覺設計"}},{"@type":"Offer","priceCurrency":"TWD","price":"113000","itemOffered":{"@type":"Service","name":"LINE 線上預約系統","description":"LIFF 預約流程、LINE 推播核准制、後台與帳本記帳"}},{"@type":"Offer","priceCurrency":"TWD","price":"22000","itemOffered":{"@type":"Service","name":"SEO / GEO 優化","description":"結構化資料、Search Console、Google 商家檔案、被 AI 引擎引用"}},{"@type":"Offer","priceCurrency":"TWD","price":"15000","itemOffered":{"@type":"Service","name":"效能與維運","description":"圖片與效能優化、跨瀏覽器相容、部署上線"}}]}}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","@id":"https://web.jiachun-mmt.com/#faq","mainEntity":[{"@type":"Question","name":"做一個網站大概多少錢？","acceptedAnswer":{"@type":"Answer","text":"採模組化報價：品牌形象官網 NT$79,000 起、LINE 線上預約系統 NT$113,000 起，可單買單一模組或整案；SEO/GEO 與效能優化為加購。實際依需求與設計細緻度調整，歡迎免費諮詢。"}},{"@type":"Question","name":"製作大概需要多久？","acceptedAnswer":{"@type":"Answer","text":"依範圍而定：一頁式形象官網約 2–4 週，含 LINE 預約系統的整案約 4–8 週。確切時程會在報價時一起確認。"}},{"@type":"Question","name":"可以只做其中一個模組嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。品牌官網、LINE 預約系統都能單獨建置；SEO/GEO 與效能優化屬加購項，需搭配官網或預約系統其中一項。"}},{"@type":"Question","name":"什麼是 GEO？和 SEO 有什麼不同？","acceptedAnswer":{"@type":"Answer","text":"SEO 是讓你在 Google 搜尋排名靠前；GEO（生成式引擎優化）是讓 ChatGPT、Perplexity、Gemini、Google AI 概覽在回答時主動引用你。做法是用結構化資料把你的服務、價格、地點變成 AI 讀得懂、可引用的事實。"}},{"@type":"Question","name":"你們用什麼技術？","acceptedAnswer":{"@type":"Answer","text":"前端使用 Astro／React／Next.js；LINE 預約系統以 LIFF＋Google Apps Script 串接；部署在 Vercel，穩定、好維護、好擴充。"}},{"@type":"Question","name":"網站做好後我可以自己改內容嗎？","acceptedAnswer":{"@type":"Answer","text":"可以。會依需求保留可編輯區塊或後台，並提供操作教學與交付文件；也可選擇後續維護方案由我們協助更新。"}},{"@type":"Question","name":"網域、LINE、Google 帳號怎麼處理？","acceptedAnswer":{"@type":"Answer","text":"第三方帳號（網域、LINE 官方帳號、Google）由您提供或我們協助申請；自訂網域、主機代管與金流串接為另計項目。"}}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
@@ -111,6 +114,15 @@ h2.sec{font-size:clamp(25px,4vw,36px);font-weight:900;line-height:1.25;margin:10
 .feat div{display:flex;gap:11px;align-items:flex-start;font-size:15px;padding:7px 0;border-bottom:1px solid var(--line)}
 .feat .ck{flex:none;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:3px}
 
+/* faq */
+.faq{max-width:800px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--blue);font-size:24px;font-weight:400;transition:.2s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 22px 20px;color:var(--soft);font-size:14.5px;line-height:1.95}
+
 /* pricing */
 .price-head{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px}
 @media(max-width:880px){.price-head{grid-template-columns:1fr 1fr}}
@@ -163,7 +175,9 @@ footer img{height:26px;margin:0 auto 12px;opacity:.9}
       <a href="#modules">服務模組</a>
       <a href="#case">實績案例</a>
       <a href="#features">功能</a>
+      <a href="#process">流程</a>
       <a href="#pricing">報價</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">聯絡</a>
     </div>
     <a class="btn btn-pri cta" href="#contact">免費諮詢</a>
@@ -300,6 +314,22 @@ footer img{height:26px;margin:0 auto 12px;opacity:.9}
   </div>
 </section>
 
+<!-- process -->
+<section class="case sec-pad" id="process">
+  <div class="wrap">
+    <span class="eyebrow">How We Work</span>
+    <h2 class="sec">合作流程，五步上線</h2>
+    <p class="lead">從聊需求到上線維運，每一步清楚透明，你隨時知道進度。</p>
+    <div class="grid g4" style="margin-top:32px">
+      <div class="card"><div class="chip" style="background:var(--blue)">1</div><h3>諮詢需求</h3><div class="k">了解你的目標、受眾與想要的功能，免費評估。</div></div>
+      <div class="card"><div class="chip" style="background:var(--blue)">2</div><h3>規劃與報價</h3><div class="k">模組化提案、透明分項報價，確認範圍與時程。</div></div>
+      <div class="card"><div class="chip" style="background:var(--pink)">3</div><h3>設計</h3><div class="k">品牌視覺與版面設計，確認風格與內容架構。</div></div>
+      <div class="card"><div class="chip" style="background:var(--pink)">4</div><h3>開發</h3><div class="k">RWD 切版、互動功能、LINE／後台串接與測試。</div></div>
+      <div class="card" style="grid-column:auto"><div class="chip" style="background:var(--blue-d)">5</div><h3>上線與優化</h3><div class="k">部署上線、SEO/GEO、操作教學與後續維護。</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- pricing -->
 <section class="case sec-pad" id="pricing">
   <div class="wrap">
@@ -367,6 +397,23 @@ footer img{height:26px;margin:0 auto 12px;opacity:.9}
       ※ Ｃ、Ｄ 為加購模組，須搭配 Ａ（官網）或 Ｂ（預約系統），不單獨銷售。<br>
       ※ 金流串接、自訂網域與主機、長期維護另計；第三方帳號（Google／LINE／網域）由業主提供或協助申請。
     </p>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="sec-pad" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="sec">常見問題</h2>
+    <div class="faq" style="margin-top:28px">
+      <details><summary>做一個網站大概多少錢？</summary><div class="ans">採模組化報價：品牌形象官網 NT$79,000 起、LINE 線上預約系統 NT$113,000 起，可單買單一模組或整案；SEO/GEO 與效能優化為加購。實際依需求與設計細緻度調整，歡迎免費諮詢。</div></details>
+      <details><summary>製作大概需要多久？</summary><div class="ans">依範圍而定：一頁式形象官網約 2–4 週，含 LINE 預約系統的整案約 4–8 週。確切時程會在報價時一起確認。</div></details>
+      <details><summary>可以只做其中一個模組嗎？</summary><div class="ans">可以。品牌官網、LINE 預約系統都能單獨建置；SEO/GEO 與效能優化屬加購項，需搭配官網或預約系統其中一項。</div></details>
+      <details><summary>什麼是 GEO？和 SEO 有什麼不同？</summary><div class="ans">SEO 是讓你在 Google 搜尋排名靠前；GEO（生成式引擎優化）是讓 ChatGPT、Perplexity、Gemini、Google AI 概覽在回答時主動引用你。做法是用結構化資料把你的服務、價格、地點變成 AI 讀得懂、可引用的事實。</div></details>
+      <details><summary>你們用什麼技術？</summary><div class="ans">前端使用 Astro／React／Next.js（純靜態或 Next.js）；LINE 預約系統以 LIFF＋Google Apps Script 串接；部署在 Vercel，穩定、好維護、好擴充。</div></details>
+      <details><summary>網站做好後我可以自己改內容嗎？</summary><div class="ans">可以。會依需求保留可編輯區塊或後台，並提供操作教學與交付文件；也可選擇後續維護方案由我們協助更新。</div></details>
+      <details><summary>網域、LINE、Google 帳號怎麼處理？</summary><div class="ans">第三方帳號（網域、LINE 官方帳號、Google）由您提供或我們協助申請；自訂網域、主機代管與金流串接（LINE Pay／信用卡）為另計項目。</div></details>
+    </div>
   </div>
 </section>
 
