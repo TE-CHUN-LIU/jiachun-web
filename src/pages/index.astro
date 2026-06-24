@@ -1,0 +1,234 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { navLinks, stats, modules, whyCards, featured, works, process, priceA, priceB, addons, bundles, priceNotes, faqs, LINE_URL, TEL, TEL_DISPLAY } from "../data/site";
+---
+<Layout>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="in">
+      <a href="#top"><img class="logo" src="/assets/logo.png" alt="家群企業" /></a>
+      <div class="links">
+        {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+        <a class="cta" href="#contact">免費諮詢</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>品牌官網 · LINE 預約系統 · SEO/GEO</div>
+      <h1>讓你的服務，<br /><span class="b">被更多人看見。</span></h1>
+      <div class="rule"></div>
+      <p>家群企業由 10 年零售實戰的商業策略顧問劉得群主理。我們從「業主要解決什麼、顧客怎麼想」出發，打造品牌官網、LINE 預約系統與 SEO/GEO——不只是做網站，是幫你達成目標。</p>
+      <div class="cta-row">
+        <a class="btn btn-pri" href="#pricing">看服務與報價</a>
+        <a class="btn btn-sec" href="#contact">直接聯絡我</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="in">
+      {stats.map((s) => (
+        <div class="col">
+          <div class="n">{s.n}<span class="u">{s.unit}</span></div>
+          <div class="label">{s.label}</div>
+          <div class="sub">{s.sub}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section class="sec modules" id="modules">
+    <div class="wrap">
+      <div class="eyebrow-cor">What I Do</div>
+      <h2 class="sec-h">一個案子，三大模組</h2>
+      <p class="sec-lead">可單獨建置，也可整案打造。從打動人的門面，到能成交與營運的工具，再到被搜尋與 AI 看見。</p>
+      <div class="grid">
+        {modules.map((m) => (
+          <div class="mod">
+            <div class="k">{m.k}</div>
+            <h3>{m.name}</h3>
+            <div class="tag">{m.tag}</div>
+            <ul>{m.items.map((i) => <li>{i}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="sec why" id="why">
+    <div class="wrap">
+      <div class="eyebrow-cor">Why Jiachun</div>
+      <h2 class="sec-h">不只是網頁設計，<br />是懂商業的夥伴</h2>
+      <p class="lead">家群企業由創辦人劉得群主理——10 年零售實戰的商業策略顧問，從單一門市店長到管理 12 家連鎖門市，目前自營兩間連鎖加盟店。我們從「業主要解決什麼、顧客怎麼想」出發做系統與設計，而不只是把網站做漂亮。</p>
+      <div class="grid">
+        {whyCards.map((c) => (
+          <div class="cell"><h3>{c.t}</h3><p>{c.d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE -->
+  <section class="sec case" id="case">
+    <div class="wrap">
+      <div class="eyebrow-cor">Selected Work</div>
+      <h2 class="sec-h">實績作品</h2>
+      <p class="sec-lead">精選案例與多產業作品。部分客戶基於隱私以產業類型呈現，完整連結歡迎洽詢。</p>
+      <div class="featured">
+        {featured.map((f) => (
+          <a class="fcard" href={f.href} target="_blank" rel="noopener">
+            <div class="img" style={`background-image:url('${f.img}')`}></div>
+            <div class="body">
+              <div class="eb">{f.eyebrow}</div>
+              <h3>{f.title}</h3>
+              <p>{f.desc}</p>
+              <div class="go">看網站 →</div>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="works">
+        {works.map((w) => (
+          <div class="work"><div class="ind">{w.ind}</div><h4>{w.t}</h4><p>{w.d}</p></div>
+        ))}
+      </div>
+      <p class="works-note">完整作品與上線連結，歡迎透過 LINE 或來電洽詢。</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec process" id="process">
+    <div class="wrap">
+      <div class="eyebrow-cor">How We Work</div>
+      <h2 class="sec-h">合作流程，五步上線</h2>
+      <p class="sec-lead" style="color:#9FB0C2">從聊需求到上線維運，每一步清楚透明，你隨時知道進度。</p>
+      <div class="grid">
+        {process.map((p) => (
+          <div class="pstep"><div class="n">{p.n}</div><h4>{p.t}</h4><p>{p.d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="sec pricing" id="pricing">
+    <div class="wrap">
+      <div class="eyebrow-cor">Pricing</div>
+      <h2 class="sec-h">模組化報價，豐儉由人</h2>
+      <p class="sec-lead">以下為功能參考價（新台幣，未稅），實際依需求與設計細緻度調整。Ｃ、Ｄ 為加購模組，需搭配 Ａ 或 Ｂ。</p>
+      <div class="ptables">
+        {[priceA, priceB].map((t) => (
+          <div class="ptable">
+            <div class="ph"><h3>{t.name}</h3><span class="tot">{t.total}</span></div>
+            {t.items.map((it) => (
+              <div class={"prow" + (it[2] ? " star" : "")}><span>{it[0]}</span><span class="amt">{it[1]}</span></div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div class="addons">
+        {addons.map((a) => (
+          <div class="acard">
+            <div class="ah"><h3>{a.name}</h3><span class="ap">{a.price}</span></div>
+            <p>{a.d}</p>
+          </div>
+        ))}
+      </div>
+      <div class="bundles">
+        {bundles.map((b) => (
+          <div class={"bcard" + (b.hot ? " hot" : "")}>
+            {b.hot && <span class="badge">最完整</span>}
+            <div class="bn">{b.name}</div>
+            <div class="bp">{b.price}</div>
+          </div>
+        ))}
+      </div>
+      <div class="pnotes">{priceNotes.map((n) => <p>{n}</p>)}</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec faq" id="faq">
+    <div class="in">
+      <div class="eyebrow-cor">FAQ</div>
+      <h2 class="sec-h">常見問題</h2>
+      <div class="faqlist" style="margin-top:36px">
+        {faqs.map((f, i) => (
+          <div class="faqitem">
+            <button class="faqq" aria-expanded={i === 0 ? "true" : "false"} data-faq>
+              <span>{f.q}</span><span class="sign">{i === 0 ? "−" : "+"}</span>
+            </button>
+            <div class="faqa"><div class="inner">{f.a}</div></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="eyebrow-cor">Let's Talk</div>
+      <h2>準備好讓服務被看見了嗎？</h2>
+      <p>歡迎聊聊你的需求，免費諮詢、不收費評估。</p>
+      <div class="btns">
+        <a class="b-gold" href={"tel:" + TEL}>📞 {TEL_DISPLAY}</a>
+        <a class="b-line" href={LINE_URL} target="_blank" rel="noopener">💬 LINE 諮詢 @600bnyng</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="in">
+      <img class="logo" src="/assets/logo.png" alt="家群企業" />
+      <div class="right">
+        2020 家群企業 · 統一編號 87404079 · 負責人 劉得群<br />
+        📞 {TEL_DISPLAY} · LINE @600bnyng · 網頁設計・LINE 預約系統・SEO/GEO
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ 手風琴：單開模式，預設第一題展開
+    const btns = Array.from(document.querySelectorAll("[data-faq]"));
+    function setOpen(panel: HTMLElement, open: boolean) {
+      panel.style.maxHeight = open ? panel.scrollHeight + "px" : "0px";
+    }
+    btns.forEach((btn) => {
+      const item = btn.parentElement!;
+      const panel = item.querySelector(".faqa") as HTMLElement;
+      const sign = btn.querySelector(".sign") as HTMLElement;
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      if (expanded) requestAnimationFrame(() => setOpen(panel, true));
+      btn.addEventListener("click", () => {
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+        btns.forEach((b) => {
+          const p = b.parentElement!.querySelector(".faqa") as HTMLElement;
+          b.setAttribute("aria-expanded", "false");
+          (b.querySelector(".sign") as HTMLElement).textContent = "+";
+          setOpen(p, false);
+        });
+        if (!isOpen) {
+          btn.setAttribute("aria-expanded", "true");
+          sign.textContent = "−";
+          setOpen(panel, true);
+        }
+      });
+    });
+    window.addEventListener("resize", () => {
+      btns.forEach((b) => {
+        if (b.getAttribute("aria-expanded") === "true") {
+          const p = b.parentElement!.querySelector(".faqa") as HTMLElement;
+          p.style.maxHeight = p.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</Layout>

@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+import { SITE, faqs } from "../data/site";
+const title = "家群企業 · 懂商業的網頁設計｜商業策略顧問 × 品牌官網・LINE 預約系統・SEO/GEO";
+const description = "家群企業由 10 年零售實戰的商業策略顧問劉得群主理。輔導過餐飲、零售便利商店與美業，從使用者與消費者邏輯打造品牌官網、LINE 預約系統與 SEO/GEO——重點是解決問題、達成目標，不只是做網站。";
+const org = {
+  "@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#org",
+  name: "家群企業", alternateName: "2020家群企業", url: SITE + "/",
+  logo: SITE + "/assets/logo.png", image: SITE + "/assets/logo.png",
+  description, telephone: "+886-932-174-988", taxID: "87404079",
+  slogan: "懂商業的網頁設計——重點是解決問題、達成目標，不只是做網站。",
+  founder: { "@type": "Person", name: "劉得群", alternateName: "得群",
+    jobTitle: ["商業策略顧問", "網頁設計師"],
+    description: "10 年零售營運實戰，從單一門市店長到管理 12 家連鎖門市主管，目前自營兩間連鎖加盟店；提供商業策略諮詢，半年協助 3 餐廳、10 零售、4 美業完成團隊配置。結合商業策略與技術實作，從使用者與消費者邏輯打造系統與網站。",
+    knowsAbout: ["商業策略諮詢", "零售營運", "連鎖門市管理", "團隊組織配置", "餐飲業", "便利商店零售", "美業", "使用者體驗", "網頁設計", "系統開發"],
+    sameAs: ["https://www.jiachun-mmt.com/#about"] },
+  areaServed: { "@type": "Country", name: "臺灣" },
+  knowsAbout: ["商業策略顧問", "品牌官網", "LINE 預約系統", "LIFF", "SEO", "GEO 生成式引擎優化", "Next.js", "響應式網頁設計"],
+  sameAs: ["https://lin.ee/y4tVOQJ"],
+  hasOfferCatalog: { "@type": "OfferCatalog", name: "網頁設計服務", itemListElement: [
+    { "@type": "Offer", priceCurrency: "TWD", price: "79000", itemOffered: { "@type": "Service", name: "品牌形象官網" } },
+    { "@type": "Offer", priceCurrency: "TWD", price: "113000", itemOffered: { "@type": "Service", name: "LINE 線上預約系統" } },
+    { "@type": "Offer", priceCurrency: "TWD", price: "22000", itemOffered: { "@type": "Service", name: "SEO / GEO 優化" } },
+    { "@type": "Offer", priceCurrency: "TWD", price: "15000", itemOffered: { "@type": "Service", name: "效能與維運" } },
+  ] },
+};
+const faqLd = { "@context": "https://schema.org", "@type": "FAQPage", "@id": SITE + "/#faq",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+---
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="google-site-verification" content="8msN6fRifnF36NuAtDvxhpF1IA8LDIaf7Bsh-2DbL1I" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={SITE + "/"} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="家群企業" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={SITE + "/"} />
+    <meta property="og:image" content={SITE + "/assets/logo.png"} />
+    <meta property="og:locale" content="zh_TW" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={SITE + "/assets/logo.png"} />
+    <meta name="theme-color" content="#0F2235" />
+    <link rel="icon" href="/assets/logo.png" />
+    <script type="application/ld+json" set:html={JSON.stringify(org)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
