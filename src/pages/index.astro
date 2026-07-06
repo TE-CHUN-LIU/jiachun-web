@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { navLinks, stats, modules, whyCards, featured, works, process, priceA, priceB, addons, bundles, priceNotes, faqs, aiWorkflow, ecosystem, LINE_URL, TEL, TEL_DISPLAY } from "../data/site";
+import { navLinks, stats, modules, whyCards, featured, works, process, priceA, priceB, addons, bundles, priceNotes, faqs, aiWorkflow, ecosystem, capabilities, LINE_URL, TEL, TEL_DISPLAY } from "../data/site";
 ---
 <Layout>
   <!-- NAV -->
@@ -47,6 +47,25 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
         ))}
       </div>
     </div>
+  </section>
+
+  <!-- 三大能力・圖文交錯 -->
+  <section class="sec cap" id="cap">
+    <div class="wrap cap-head">
+      <div class="eyebrow-cor">What I Build</div>
+      <h2 class="sec-h">三大能力，一站包辦</h2>
+      <p class="sec-lead">從打動人的官網、能營運的系統，到讓一個人抵一個團隊的 AI 工作流。</p>
+    </div>
+    {capabilities.map((c, i) => (
+      <div class={"cap-row" + (i % 2 === 1 ? " rev" : "")}>
+        <div class="cap-img" style={`background-image:url('${c.img}')`}></div>
+        <div class="cap-txt">
+          <div class="cap-eb">{c.eb}</div>
+          <h3>{c.name}</h3>
+          <p>{c.d}</p>
+        </div>
+      </div>
+    ))}
   </section>
 
   <!-- STATS -->

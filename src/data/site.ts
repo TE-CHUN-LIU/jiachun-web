@@ -129,3 +129,9 @@ export const ecosystem = [
   { name: "家群數位接案", href: "https://studio.jiachun-mmt.com", tag: "B · 數位接案", d: "品牌官網・系統開發・AI 混合工作流", self: true },
   { name: "家群資訊系統", href: "https://web.jiachun-mmt.com", tag: "B · 中台系統", d: "官網商城・購物結帳・後台管理", ext: true },
 ];
+
+export const capabilities = [
+  { img: "/assets/svc-web.jpg", eb: "01 · WEBSITE", name: "品牌形象官網", d: "編輯雜誌風視覺、RWD 響應式、互動自評推薦——一頁式門面，打動人，也留得住人。" },
+  { img: "/assets/svc-system.jpg", eb: "02 · SYSTEM", name: "系統・後台開發", d: "LINE 預約、購物商城、報價系統、後台管理一手包——不只好看，能成交、能營運。" },
+  { img: "/assets/svc-ai.jpg", eb: "03 · AI WORKFLOW", name: "AI 混合工作流", d: "策略的腦＋執行的手，一人成軍。一個團隊的產出，一個人的成本、一半的時間。" },
+];
