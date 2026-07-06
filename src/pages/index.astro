@@ -103,9 +103,14 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
   <!-- WHY -->
   <section class="sec why" id="why">
     <div class="wrap">
-      <div class="eyebrow-cor">Why Jiachun</div>
-      <h2 class="sec-h">不只是網頁設計，<br />是懂商業的夥伴</h2>
-      <p class="lead">家群企業由創辦人劉得群主理——10 年零售實戰的商業策略顧問，從單一門市店長到管理 12 家連鎖門市，目前自營兩間連鎖加盟店。我們從「業主要解決什麼、顧客怎麼想」出發做系統與設計，而不只是把網站做漂亮。</p>
+      <div class="why-intro">
+        <div class="why-photo" aria-hidden="true"></div>
+        <div class="why-lead-box">
+          <div class="eyebrow-cor">Why Jiachun · 你的顧問</div>
+          <h2 class="sec-h">不只是網頁設計，<br />是懂商業的夥伴</h2>
+          <p class="lead">創辦人劉得群——10 年零售實戰的商業策略顧問，從單一門市店長到管理 12 家連鎖門市，目前自營兩間連鎖加盟店。從「業主要解決什麼、顧客怎麼想」出發做系統與設計，而不只是把網站做漂亮。</p>
+        </div>
+      </div>
       <div class="grid">
         {whyCards.map((c) => (
           <div class="cell"><h3>{c.t}</h3><p>{c.d}</p></div>

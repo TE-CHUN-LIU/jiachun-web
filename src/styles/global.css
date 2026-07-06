@@ -88,6 +88,9 @@ img{display:block;max-width:100%}
 .why .cell:hover{background:#fff}
 .why .cell h3{font-family:"Noto Serif TC",serif;font-size:20px;color:var(--ink);font-weight:600}
 .why .cell p{font-size:14px;color:var(--t3);margin-top:8px;line-height:1.9}
+.why-intro{display:grid;grid-template-columns:.82fr 1.18fr;gap:50px;align-items:center;margin-bottom:10px}
+.why-photo{aspect-ratio:4/5;background:url('/assets/hero-portrait.jpg') center 10%/cover no-repeat;border-radius:8px;border:1px solid var(--b2)}
+@media(max-width:760px){.why-intro{grid-template-columns:1fr;gap:24px}.why-photo{max-width:300px;aspect-ratio:1/1;margin:0 auto}}
 @media(max-width:680px){.why h2,.why .sec-h{font-size:31px}.why .grid{grid-template-columns:1fr}}
 
 /* case */
