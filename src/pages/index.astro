@@ -28,6 +28,27 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
     </div>
   </header>
 
+  <!-- 家群生態系（上移到 Hero 下方，當業務分流入口）-->
+  <section class="eco" id="eco">
+    <div class="wrap">
+      <div class="eco-head">
+        <div class="eco-eb">JIACHUN ECOSYSTEM</div>
+        <h3>家群生態系・三大服務</h3>
+        <p>官網、系統、天賦解讀——選一個入口開始，或整套交給家群。</p>
+      </div>
+      <div class="eco-grid">
+        {ecosystem.map((e) => (
+          <a class={"eco-card" + (e.self ? " self" : "")} href={e.href} target={e.ext ? "_blank" : undefined} rel={e.ext ? "noopener" : undefined}>
+            <div class="eco-tag">{e.tag}{e.self ? " · 本站" : ""}</div>
+            <div class="eco-name">{e.name}</div>
+            <div class="eco-d">{e.d}</div>
+            <div class="eco-go">{e.self ? "你正在這裡" : "前往 →"}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- STATS -->
   <section class="stats">
     <div class="in">
@@ -204,27 +225,6 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
     </div>
   </section>
 
-  <!-- 家群生態系 -->
-  <section class="eco">
-    <div class="wrap">
-      <div class="eco-head">
-        <div class="eco-eb">JIACHUN ECOSYSTEM</div>
-        <h3>家群生態系</h3>
-        <p>官網、系統、天賦解讀——家群旗下服務，一個體系互通。</p>
-      </div>
-      <div class="eco-grid">
-        {ecosystem.map((e) => (
-          <a class={"eco-card" + (e.self ? " self" : "")} href={e.href} target={e.ext ? "_blank" : undefined} rel={e.ext ? "noopener" : undefined}>
-            <div class="eco-tag">{e.tag}{e.self ? " · 本站" : ""}</div>
-            <div class="eco-name">{e.name}</div>
-            <div class="eco-d">{e.d}</div>
-            <div class="eco-go">{e.self ? "你正在這裡" : "前往 →"}</div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="in">
@@ -271,5 +271,20 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
         }
       });
     });
+
+    // 捲動浮現（JS 執行時才掛 reveal，無 JS 也能正常顯示）
+    document.querySelectorAll(".sec, .eco, .stats").forEach((el) => el.classList.add("reveal"));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    // 浮動回頂部
+    const topBtn = document.createElement("button");
+    topBtn.className = "topbtn";
+    topBtn.setAttribute("aria-label", "回頂部");
+    topBtn.textContent = "↑";
+    topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    document.body.appendChild(topBtn);
+    window.addEventListener("scroll", () => topBtn.classList.toggle("show", window.scrollY > 600), { passive: true });
   </script>
 </Layout>
