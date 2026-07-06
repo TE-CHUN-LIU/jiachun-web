@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { navLinks, stats, modules, whyCards, featured, works, process, priceA, priceB, addons, bundles, priceNotes, faqs, aiWorkflow, LINE_URL, TEL, TEL_DISPLAY } from "../data/site";
+import { navLinks, stats, modules, whyCards, featured, works, process, priceA, priceB, addons, bundles, priceNotes, faqs, aiWorkflow, ecosystem, LINE_URL, TEL, TEL_DISPLAY } from "../data/site";
 ---
 <Layout>
   <!-- NAV -->
@@ -200,6 +200,27 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
       <div class="btns">
         <a class="b-gold" href={"tel:" + TEL}>📞 {TEL_DISPLAY}</a>
         <a class="b-line" href={LINE_URL} target="_blank" rel="noopener">💬 LINE 諮詢 @600bnyng</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 家群生態系 -->
+  <section class="eco">
+    <div class="wrap">
+      <div class="eco-head">
+        <div class="eco-eb">JIACHUN ECOSYSTEM</div>
+        <h3>家群生態系</h3>
+        <p>官網、系統、天賦解讀——家群旗下服務，一個體系互通。</p>
+      </div>
+      <div class="eco-grid">
+        {ecosystem.map((e) => (
+          <a class={"eco-card" + (e.self ? " self" : "")} href={e.href} target={e.ext ? "_blank" : undefined} rel={e.ext ? "noopener" : undefined}>
+            <div class="eco-tag">{e.tag}{e.self ? " · 本站" : ""}</div>
+            <div class="eco-name">{e.name}</div>
+            <div class="eco-d">{e.d}</div>
+            <div class="eco-go">{e.self ? "你正在這裡" : "前往 →"}</div>
+          </a>
+        ))}
       </div>
     </div>
   </section>

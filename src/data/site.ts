@@ -123,3 +123,9 @@ export const aiWorkflow = {
   ],
   proofNote: "同樣的案子，傳統做法要一個團隊、跑一整季。",
 };
+
+export const ecosystem = [
+  { name: "MMT 天賦系統", href: "https://www.jiachun-mmt.com", tag: "C · 天賦解讀", d: "生日人格學・天賦解讀・解讀師工作站", ext: true },
+  { name: "家群數位接案", href: "https://studio.jiachun-mmt.com", tag: "B · 數位接案", d: "品牌官網・系統開發・AI 混合工作流", self: true },
+  { name: "家群資訊系統", href: "https://web.jiachun-mmt.com", tag: "B · 中台系統", d: "官網商城・購物結帳・後台管理", ext: true },
+];
