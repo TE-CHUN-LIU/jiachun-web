@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
 import { SITE, faqs } from "../data/site";
-const title = "家群企業 · 懂商業的網頁設計｜商業策略顧問 × 品牌官網・LINE 預約系統・SEO/GEO";
-const description = "家群企業由 10 年零售實戰的商業策略顧問劉得群主理。輔導過餐飲、零售便利商店與美業，從使用者與消費者邏輯打造品牌官網、LINE 預約系統與 SEO/GEO——重點是解決問題、達成目標，不只是做網站。";
+const title = "家群數位接案 · 懂商業的網頁設計｜客製官網・系統開發・AI 混合工作流（桃園）";
+const description = "客製接案門面：10 年零售實戰商業策略顧問劉得群主理，用 AI 混合工作流打造客製品牌官網、LINE 預約與系統開發。免費諮詢、模組化報價。想直接選標準模組線上下單，請至家群資訊系統。";
 const org = {
   "@context": "https://schema.org", "@type": "ProfessionalService", "@id": SITE + "/#org",
   name: "家群企業", alternateName: "2020家群企業", url: SITE + "/",
@@ -54,6 +54,14 @@ const faqLd = { "@context": "https://schema.org", "@type": "FAQPage", "@id": SIT
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" />
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-KXRXQVET56"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KXRXQVET56');
+    </script>
   </head>
   <body>
     <slot />

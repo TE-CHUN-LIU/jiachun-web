@@ -17,7 +17,7 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
   <!-- HERO -->
   <header class="hero" id="top">
     <div class="wrap hero-inner">
-      <div class="eyebrow"><span class="dot"></span>AI 混合工作流 · 官網 · 系統 · 預約</div>
+      <div class="eyebrow"><span class="dot"></span>客製接案 · 商業策略顧問 · AI 混合工作流</div>
       <h1>讓你的服務，<br /><span class="b">被更多人看見。</span></h1>
       <div class="rule"></div>
       <p>10 年零售實戰的商業策略顧問主理。用 AI 混合工作流，把官網、系統、自動化一站做完——一個團隊的產出，一個人的成本、一半的時間。</p>
@@ -85,8 +85,8 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
   <section class="sec modules" id="modules">
     <div class="wrap">
       <div class="eyebrow-cor">What I Do</div>
-      <h2 class="sec-h">一個案子，三大模組</h2>
-      <p class="sec-lead">可單獨建置，也可整案打造。從打動人的門面，到能成交與營運的工具，再到被搜尋與 AI 看見。</p>
+      <h2 class="sec-h">客製整案・三大模組</h2>
+      <p class="sec-lead">依你的生意客製，可單獨建置也可整案打造——從打動人的門面、能成交的工具，到被搜尋與 AI 看見。已經知道要什麼、想直接選標準模組線上下單？<a href="https://web.jiachun-mmt.com/" style="text-decoration:underline">前往家群資訊系統 →</a></p>
       <div class="grid">
         {modules.map((m) => (
           <div class="mod">
@@ -215,6 +215,10 @@ import { navLinks, stats, modules, whyCards, featured, works, process, priceA, p
         ))}
       </div>
       <div class="pnotes">{priceNotes.map((n) => <p>{n}</p>)}</div>
+      <div class="price-cta">
+        <p>以上為<strong>參考價</strong>，實際依你的需求與規模客製。<br />不用比價比到頭痛——<strong>加 LINE 聊聊你的案子，免費評估、不收費用。</strong></p>
+        <a class="btn-line-big" href={LINE_URL} target="_blank" rel="noopener">💬 LINE 聊聊你的需求 @600bnyng</a>
+      </div>
     </div>
   </section>
 

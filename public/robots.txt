@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://web.jiachun-mmt.com/sitemap.xml
+Sitemap: https://studio.jiachun-mmt.com/sitemap.xml

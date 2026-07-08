@@ -1,4 +1,4 @@
-export const SITE = "https://web.jiachun-mmt.com";
+export const SITE = "https://studio.jiachun-mmt.com";
 export const LINE_URL = "https://lin.ee/y4tVOQJ";
 export const TEL = "0932174988";
 export const TEL_DISPLAY = "0932-174-988";
